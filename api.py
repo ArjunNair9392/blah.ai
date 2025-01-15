@@ -32,6 +32,8 @@ class AssistantFunction(agents.llm.FunctionContext):
             ),
         ],
     ):
+        logger.info("name is ", name)
+        logger.info("Email is ", email)
         # Validate email
         if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
             return "The email address seems incorrect. Please provide a valid one."
